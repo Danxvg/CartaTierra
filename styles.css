@@ -1,0 +1,345 @@
+/* =========================
+   🎯 RESET
+========================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* =========================
+   🌍 VARIABLES (PALETA)
+========================= */
+:root {
+    --verde: #2E7D32;
+    --verde-claro: #66BB6A;
+    --azul: #1976D2;
+    --fondo: #f4f9f6;
+    --blanco: #ffffff;
+    --gris: #555;
+    --sombra: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+/* =========================
+   GENERAL
+========================= */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: var(--fondo);
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+    padding: 60px 0;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: var(--verde);
+}
+
+.intro {
+    text-align: center;
+    color: var(--gris);
+    margin-bottom: 40px;
+}
+
+/* =========================
+   🧭 NAV
+========================= */
+.header {
+    background: var(--verde);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+}
+
+.logo {
+    color: white;
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    opacity: 0.7;
+}
+
+/* =========================
+   🏠 HOME
+========================= */
+.home {
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+    url('https://images.unsplash.com/photo-1501004318641-b39e6451bec6');
+    background-size: cover;
+    background-position: center;
+
+    color: white;
+}
+
+.titulo-home {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.home p {
+    margin-bottom: 20px;
+}
+
+/* =========================
+   🔘 BOTONES
+========================= */
+.btn {
+    background: var(--azul);
+    color: white;
+    padding: 12px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+    display: inline-block;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    background: #0d47a1;
+}
+
+/* =========================
+   🎥 VIDEO
+========================= */
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    margin-bottom: 40px;
+}
+
+.video-container iframe {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+/* =========================
+   🧩 GRIDS
+========================= */
+.info-grid,
+.principios-grid,
+.acciones-grid,
+.cartas-grid,
+.impacto-grid {
+    display: grid;
+    gap: 20px;
+}
+
+/* =========================
+   🧱 CARDS
+========================= */
+.info-card,
+.principio-card,
+.accion-card,
+.carta-card,
+.impacto-card,
+.sobre-card {
+    background: var(--blanco);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: var(--sombra);
+    transition: 0.3s;
+}
+
+.info-card:hover,
+.principio-card:hover,
+.accion-card:hover {
+    transform: translateY(-6px);
+}
+
+/* =========================
+   📝 FORMULARIOS
+========================= */
+.formulario {
+    max-width: 600px;
+    margin: auto;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    transition: 0.2s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+    border-color: var(--verde);
+    outline: none;
+}
+
+textarea {
+    resize: none;
+}
+
+/* =========================
+   💌 CARTAS
+========================= */
+.carta-card {
+    cursor: pointer;
+}
+
+.carta-detalle {
+    display: none;
+    margin-top: 10px;
+}
+
+.carta-card.active .carta-detalle {
+    display: block;
+}
+
+.btn-like {
+    background: #e91e63;
+    color: white;
+    padding: 8px;
+    border-radius: 6px;
+    margin-top: 10px;
+}
+
+/* =========================
+   📊 IMPACTO
+========================= */
+.numero {
+    font-size: 2rem;
+    color: var(--azul);
+}
+
+/* =========================
+   🔵 GRÁFICA
+========================= */
+.grafica-circular {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.circulo {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    background: conic-gradient(var(--verde) 0%, #ddd 0%);
+}
+
+/* =========================
+   🧠 QUIZ
+========================= */
+.pregunta {
+    margin-bottom: 20px;
+}
+
+.pregunta label {
+    display: block;
+    margin-top: 5px;
+}
+
+/* =========================
+   📌 SOBRE
+========================= */
+.sobre-card {
+    margin-bottom: 25px;
+}
+
+/* =========================
+   📱 RESPONSIVE
+========================= */
+
+/* TABLET */
+@media (min-width: 600px) {
+    .info-grid,
+    .acciones-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* PC */
+@media (min-width: 900px) {
+    .info-grid,
+    .principios-grid,
+    .acciones-grid,
+    .cartas-grid,
+    .impacto-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* MÓVIL */
+@media (max-width: 768px) {
+
+    .menu {
+        flex-direction: column;
+        background: var(--verde);
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 200px;
+        display: none;
+    }
+
+    .menu.active {
+        display: flex;
+    }
+
+}
+
+/* =========================
+   ✨ ANIMACIONES
+========================= */
+.animado {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: 0.6s;
+}
+
+.animado.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
